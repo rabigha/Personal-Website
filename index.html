@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="script.js">
+
+	</script>
+</head>
+
+<body onload="welcomeFunction()">
+<h1 id="background" />
+<h1 id="heading">About Me</h1>
+
+<div id="about_me">
+  
+	<div class="section" id="name_section">
+		<p class="section_header">Name and Age:</p>
+		<p class="contents" id="my_name">[name]</p>
+		<p class="contents" id="yes">[age]</p>
+	</div>
+
+	<div id="origin_section">
+		<p class="section" />
+		<p class="section_header">Where I'm from:</p>
+		<p class="contents">New York</p>
+	</div>
+
+	<div id="hobby_section">
+		<p class="section"/>
+		<p class="section_header">Hobbies:</p>
+		<img id="pic2" src="god-of-war.jpg" alt="play games"/>
+			<p class="contents" onclick="clickParagraph('Video games are entertaining.')">Playing video games</p>
+			<p class="contents" onclick="clickParagraph('Basketball keeps me active.')">Playing basketball</p>
+			<p class="contents" onclick="clickParagraph('Volleyball is one of my favorite sports.')"> Playing volleyball</p>
+			<p class="contents" onclick="clickParagraph('Anime is nice to watch.')"> Watching anime</p>
+      <img id= "pic1" src= "bleach-thingy.jpg" alt="Watch TV shows"/>
+	</div>
+
+	<div style="margin-bottom:40px" id="profession_section">
+			<p class="section_header">What I do:</p>
+			<p class="contents">I am a student in my junior year at TBLS</p>
+				<a href="https://www.brooklynlatin.org/" target="_blank">
+					<!-- Image is link -->
+					<img id="schoolpic" src="school-thingy.png" alt="school"/>
+          </a>
+	</div>
+</div>
+
+<fieldset>
+  <p>Coin Toss History:</p>
+  <p id="coin_toss_history"></p>
+  <p id="coin_flip_text"></p>
+  <input type="button" value="Flip a Coin" onclick="coinToss()"/>
+  <input type="button" value="Explosion" onclick="cheatTheCoinFlips()"/>
+  <input type="button" value="Weight the coin" onclick="addSomeHeads()"/>
+</fieldset>
+
+<br/>
+
+<form name="myform" onSubmit="jS()">
+  <fieldset>
+    <legend> Tell Me About Yourself! </legend>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="firstname" placeholder="Enter your first name" /><br /><br/>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lastname" placeholder="Enter your last name"/><br /><br/>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="emailaddress" placeholder="Enter your email" /><br /><br/>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthdaydate" /><br /><br/>
+    <button onclick ="submit()" id = "btn1"> Submit </button>
+  </fieldset>
+</form>
+
+<br/>
+
+<fieldset>
+  <legend id="game"> Game Quiz </legend>
+    <p>What is my Favorite Game?</p>
+        <input type="radio" id="spider.man" name="games" value="Marvel's Spider-Man"/>
+      <label for="Marvel's Spider-Man"> Marvel's Spider-Man </label><br/>
+        <input type="radio" id="warzone" name="games" value="Warzone"/>
+      <label for="Warzone"> Warzone </label><br/>
+        <input type="radio" id="god.war" name="games" value="God of War"/>
+      <label for="God of War"> God of War </label><br/><br/>
+        <input type="button" value="Submit" onclick="chooseGame()"/>
+    <p id="gameResult">...</p>
+</fieldset>
+
+<br/>
+
+<fieldset>
+  <legend> Which platform? </legend>
+    <p >Check this box if you are Playstation gang; if not, only click submit</p>
+    <input type="checkbox" id="cube"/>
+    <button onclick="checkPoint()">Submit</button>
+</fieldset>
+
+<br/>
+
+<fieldset>
+  <legend> Which Color? </legend>
+    <p>What is your favorite color?</p>
+      <select id="color">
+        <option>Red</option>
+        <option>Orange</option>
+        <option>Yellow</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>Purple</option>
+        <option>Pink</option>
+        <option>White</option>
+        <option>Black</option>
+        <option>Grey</option>
+        <option>Brown</option>
+        <option>None of these</option>
+      </select>
+          <input type="button" value="submit" onclick="FavColor()" />
+</fieldset>
+
+<br/>
+
+<fieldset>
+  <legend> A little something </legend>
+  <p>True or False: 2 does not have an alphanumeric value. Click 'Show Answer' to find out.</p>
+  <button onclick="alphanumFunction()">Show Answer</button>
+
+  <p id="numero"></p>
+</fieldset>
+
+<br/>
+
+<fieldset>
+  <legend> Some Number Shenanigans </legend>
+    <p>Pick a number</p>
+    <input type="text" id="num"/>
+    <button onclick="pickNum(); numerical()">Submit</button>
+  <p id="numeric">_</p>
+</fieldset>
+
+</body>
+
+</html>
